@@ -23,6 +23,7 @@ namespace Planificator_IOC
         {
             InitializeComponent();
             this.Text = string.Empty;
+            //nu afiseaza peste taskbar
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.ControlBox = false;
 
@@ -79,6 +80,7 @@ namespace Planificator_IOC
             Application.Exit();
         }
 
+        //modifica pozitia
         private void dashboard_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -130,26 +132,8 @@ namespace Planificator_IOC
 
         }
 
-        private void dashboard_Closing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                DialogResult result = MessageBox.Show("Do you really want to exit?", "Dialog Title", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
-
+       
+        //modifica pozitia
         private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -172,6 +156,11 @@ namespace Planificator_IOC
         private void minBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

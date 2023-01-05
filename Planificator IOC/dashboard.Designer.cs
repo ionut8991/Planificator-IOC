@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lableTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.minBtn = new System.Windows.Forms.PictureBox();
+            this.maxBtn = new System.Windows.Forms.PictureBox();
+            this.exitBtn = new System.Windows.Forms.PictureBox();
             this.btnContact = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnTodo = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnContacts = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.minBtn = new System.Windows.Forms.PictureBox();
-            this.maxBtn = new System.Windows.Forms.PictureBox();
-            this.exitBtn = new System.Windows.Forms.PictureBox();
-            this.lableTitle = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.ExitButton2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,6 +69,105 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 506);
             this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 75);
+            this.panel2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(33, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Helix Planner";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.minBtn);
+            this.panel3.Controls.Add(this.maxBtn);
+            this.panel3.Controls.Add(this.exitBtn);
+            this.panel3.Controls.Add(this.lableTitle);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(220, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(680, 75);
+            this.panel3.TabIndex = 11;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            // 
+            // lableTitle
+            // 
+            this.lableTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lableTitle.AutoSize = true;
+            this.lableTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lableTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lableTitle.Location = new System.Drawing.Point(301, 22);
+            this.lableTitle.Name = "lableTitle";
+            this.lableTitle.Size = new System.Drawing.Size(93, 34);
+            this.lableTitle.TabIndex = 0;
+            this.lableTitle.Text = "Home";
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(220, 75);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(680, 431);
+            this.panelDesktop.TabIndex = 12;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // minBtn
+            // 
+            this.minBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minBtn.Image = global::Planificator_IOC.Properties.Resources.minimize;
+            this.minBtn.Location = new System.Drawing.Point(606, -1);
+            this.minBtn.Name = "minBtn";
+            this.minBtn.Size = new System.Drawing.Size(20, 18);
+            this.minBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minBtn.TabIndex = 3;
+            this.minBtn.TabStop = false;
+            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
+            // 
+            // maxBtn
+            // 
+            this.maxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maxBtn.Image = global::Planificator_IOC.Properties.Resources.maximize__2_;
+            this.maxBtn.Location = new System.Drawing.Point(633, -1);
+            this.maxBtn.Name = "maxBtn";
+            this.maxBtn.Size = new System.Drawing.Size(20, 18);
+            this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.maxBtn.TabIndex = 2;
+            this.maxBtn.TabStop = false;
+            this.maxBtn.Click += new System.EventHandler(this.maxBtn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitBtn.Image = global::Planificator_IOC.Properties.Resources.Red_X_svg;
+            this.exitBtn.Location = new System.Drawing.Point(659, -1);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(20, 18);
+            this.exitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exitBtn.TabIndex = 1;
+            this.exitBtn.TabStop = false;
+            this.exitBtn.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // btnContact
             // 
@@ -165,104 +264,6 @@
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 75);
-            this.panel2.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(33, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Helix Planner";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.minBtn);
-            this.panel3.Controls.Add(this.maxBtn);
-            this.panel3.Controls.Add(this.exitBtn);
-            this.panel3.Controls.Add(this.lableTitle);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(220, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(680, 75);
-            this.panel3.TabIndex = 11;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
-            // 
-            // minBtn
-            // 
-            this.minBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minBtn.Image = global::Planificator_IOC.Properties.Resources.minimize;
-            this.minBtn.Location = new System.Drawing.Point(606, -1);
-            this.minBtn.Name = "minBtn";
-            this.minBtn.Size = new System.Drawing.Size(20, 18);
-            this.minBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minBtn.TabIndex = 3;
-            this.minBtn.TabStop = false;
-            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
-            // 
-            // maxBtn
-            // 
-            this.maxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maxBtn.Image = global::Planificator_IOC.Properties.Resources.maximize__2_;
-            this.maxBtn.Location = new System.Drawing.Point(633, -1);
-            this.maxBtn.Name = "maxBtn";
-            this.maxBtn.Size = new System.Drawing.Size(20, 18);
-            this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.maxBtn.TabIndex = 2;
-            this.maxBtn.TabStop = false;
-            this.maxBtn.Click += new System.EventHandler(this.maxBtn_Click);
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitBtn.Image = global::Planificator_IOC.Properties.Resources.Red_X_svg;
-            this.exitBtn.Location = new System.Drawing.Point(659, -1);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(20, 18);
-            this.exitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exitBtn.TabIndex = 1;
-            this.exitBtn.TabStop = false;
-            this.exitBtn.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // lableTitle
-            // 
-            this.lableTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lableTitle.AutoSize = true;
-            this.lableTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lableTitle.Location = new System.Drawing.Point(301, 22);
-            this.lableTitle.Name = "lableTitle";
-            this.lableTitle.Size = new System.Drawing.Size(93, 34);
-            this.lableTitle.TabIndex = 0;
-            this.lableTitle.Text = "Home";
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 75);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(680, 431);
-            this.panelDesktop.TabIndex = 12;
             // 
             // ExitButton2
             // 

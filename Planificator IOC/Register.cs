@@ -92,5 +92,12 @@ namespace Planificator_IOC
                 regPass.Focus();
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Login f1 = new Login();
+            f1.Show();
+            this.Close();
+        }
     }
 }
