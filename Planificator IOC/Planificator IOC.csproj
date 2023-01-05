@@ -72,6 +72,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_usersDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_usersDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_usersDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_usersDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_usersDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +188,28 @@
     </None>
     <None Include="db_usersDataSet.xss">
       <DependentUpon>db_usersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_usersDataSet1.xsc">
+      <DependentUpon>db_usersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_usersDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_usersDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_usersDataSet1.xss">
+      <DependentUpon>db_usersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_usersDataSet2.xsc">
+      <DependentUpon>db_usersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_usersDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_usersDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_usersDataSet2.xss">
+      <DependentUpon>db_usersDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
