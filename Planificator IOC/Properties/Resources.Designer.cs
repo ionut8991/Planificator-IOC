@@ -233,6 +233,16 @@ namespace Planificator_IOC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap send__1_ {
+            get {
+                object obj = ResourceManager.GetObject("send (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap setting_lines {
             get {
                 object obj = ResourceManager.GetObject("setting-lines", resourceCulture);
@@ -246,6 +256,16 @@ namespace Planificator_IOC.Properties {
         internal static System.Drawing.Bitmap to_do_list {
             get {
                 object obj = ResourceManager.GetObject("to-do-list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap work_in_progress {
+            get {
+                object obj = ResourceManager.GetObject("work-in-progress", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

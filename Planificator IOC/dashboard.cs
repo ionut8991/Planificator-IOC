@@ -162,5 +162,20 @@ namespace Planificator_IOC
         {
 
         }
+
+        private void btnBooks_MouseHover(object sender, EventArgs e)
+        {
+            booksTip.SetToolTip(btnBooks, "Coming soon! Not available yet");
+        }
+
+        private void btnTodo_MouseHover(object sender, EventArgs e)
+        {
+            TodoTip.SetToolTip(btnTodo, "Coming soon! Not available yet");
+        }
+
+        private void btnSettings_MouseHover(object sender, EventArgs e)
+        {
+            settingTip.SetToolTip(btnSettings, "Coming soon! Not available yet");
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -35,6 +36,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lableTitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.booksTip = new System.Windows.Forms.ToolTip(this.components);
+            this.TodoTip = new System.Windows.Forms.ToolTip(this.components);
+            this.settingTip = new System.Windows.Forms.ToolTip(this.components);
             this.minBtn = new System.Windows.Forms.PictureBox();
             this.maxBtn = new System.Windows.Forms.PictureBox();
             this.exitBtn = new System.Windows.Forms.PictureBox();
@@ -133,6 +137,18 @@
             this.panelDesktop.TabIndex = 12;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
+            // booksTip
+            // 
+            this.booksTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // TodoTip
+            // 
+            this.TodoTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // settingTip
+            // 
+            this.settingTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // minBtn
             // 
             this.minBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -200,6 +216,7 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.button5_Click);
+            this.btnSettings.MouseHover += new System.EventHandler(this.btnSettings_MouseHover);
             // 
             // btnTodo
             // 
@@ -216,6 +233,7 @@
             this.btnTodo.Text = "ToDo List";
             this.btnTodo.UseVisualStyleBackColor = true;
             this.btnTodo.Click += new System.EventHandler(this.button4_Click);
+            this.btnTodo.MouseHover += new System.EventHandler(this.btnTodo_MouseHover);
             // 
             // btnBooks
             // 
@@ -232,6 +250,7 @@
             this.btnBooks.Text = "Books";
             this.btnBooks.UseVisualStyleBackColor = true;
             this.btnBooks.Click += new System.EventHandler(this.button3_Click);
+            this.btnBooks.MouseHover += new System.EventHandler(this.btnBooks_MouseHover);
             // 
             // btnContacts
             // 
@@ -325,5 +344,8 @@
         private System.Windows.Forms.PictureBox exitBtn;
         private System.Windows.Forms.PictureBox minBtn;
         private System.Windows.Forms.PictureBox maxBtn;
+        private System.Windows.Forms.ToolTip booksTip;
+        private System.Windows.Forms.ToolTip TodoTip;
+        private System.Windows.Forms.ToolTip settingTip;
     }
 }

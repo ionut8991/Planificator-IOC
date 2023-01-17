@@ -143,5 +143,20 @@ namespace Planificator_IOC.Pages
 
             MessageBox.Show("Update succesful!","Succes",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(btnEdit, "Pentru editare apasati dublu click in casuta dorita, \nfaceti modificarile necesare si apasati pe butonul 'Edit' ");
+        }
     }
 }
