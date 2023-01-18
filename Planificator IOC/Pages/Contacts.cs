@@ -48,7 +48,7 @@ namespace Planificator_IOC.Pages
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            /*
+            
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Ionut\Desktop\Proiect IOC\Planificator IOC\Planificator IOC\db_users.mdf"";Integrated Security=True");
             con.Open();
 
@@ -56,10 +56,10 @@ namespace Planificator_IOC.Pages
 
             if (dataGridContacte.SelectedCells.Count > 0)
             {
-                int i = dataGridContacte.SelectedCells[0];
+                int i = int.Parse(dataGridContacte.SelectedCells[0].ToString());
                 if(dataGridContacte.Rows.Count > 1 && i != dataGridContacte.Rows.Count -1)
                 { 
-                SqlCommand deletecmd = new SqlCommand("delete from Contacte where id = " + dataGridContacte.SelectedRows[i].Cells[0].Value.ToString() + "");
+                SqlCommand deletecmd = new SqlCommand("delete from Contacte where Id = " + dataGridContacte.SelectedRows[i].Cells[0].Value.ToString() + "");
                 deletecmd.ExecuteNonQuery();
                 dataGridContacte.Rows.RemoveAt(this.dataGridContacte.SelectedRows[i].Index);
                     MessageBox.Show("Deleted");
@@ -75,7 +75,7 @@ namespace Planificator_IOC.Pages
 
             con.Close();
 
-           */ 
+           
         }
         
 
