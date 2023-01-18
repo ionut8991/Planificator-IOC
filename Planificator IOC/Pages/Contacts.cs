@@ -59,7 +59,7 @@ namespace Planificator_IOC.Pages
                 int i = int.Parse(dataGridContacte.SelectedCells[0].ToString());
                 if(dataGridContacte.Rows.Count > 1 && i != dataGridContacte.Rows.Count -1)
                 { 
-                SqlCommand deletecmd = new SqlCommand("delete from Contacte where Id = " + dataGridContacte.SelectedRows[i].Cells[0].Value.ToString() + "");
+                SqlCommand deletecmd = new SqlCommand("delete from Contacte where Id = " + int.Parse(dataGridContacte.SelectedRows[i].Cells[0].Value.ToString()) + "");
                 deletecmd.ExecuteNonQuery();
                 dataGridContacte.Rows.RemoveAt(this.dataGridContacte.SelectedRows[i].Index);
                     MessageBox.Show("Deleted");

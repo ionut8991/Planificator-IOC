@@ -53,9 +53,9 @@ namespace Planificator_IOC
 
 
 
-            if(regUser.Text == "" && regPass.Text == "" && regConPass.Text == "")
+            if(regUser.Text == "" || regPass.Text == "" || regConPass.Text == "")
             {
-                MessageBox.Show("Username and Password fields are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username or Password fields are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if(regPass.Text == regConPass.Text)
             {
